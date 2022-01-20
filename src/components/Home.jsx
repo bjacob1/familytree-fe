@@ -1,6 +1,5 @@
 import React from "react";
-// import img from "./pala_church.jpg";
-import MapSection from "./MapSection";
+// import MapSection from "./MapSection";
 
 function Home() {
   return (
@@ -13,7 +12,7 @@ function Home() {
                 <b>Family History</b>
               </h4>
               <font face="verdana" size={3}>
-                Based on available sources, we belong to Tharayil Mappila's
+                Based on available sources, we belong to Tharayil Mappila&apos;s
                 lineage. In about 1000 AD, the Tharayil Mappilas depended on
                 Kuravillangadu church and Aruvithura church for their spiritual
                 needs. An unhappy incident occurred at this time. It was the
@@ -55,10 +54,7 @@ function Home() {
               <br />
               <div align="center">
                 <img
-                  // src="../../public/images/album/pala_church.jpg"
-                  // src="./pala_church.jpg"
-                  // src={require("./pala_church.jpg")}
-                  src="./pala_church.jpg"
+                  src="./images/album/pala_church.jpg"
                   alt="Pala Church"
                   width={700}
                 />
@@ -69,11 +65,11 @@ function Home() {
                 Due to attacks from enemies after Pala Palli construction,{" "}
                 <a href="index.jsp?id=10">Tharayil Mappila</a> moved to
                 Njaralakattu (Njallaykattu) near the church and stayed there.{" "}
-                <a href="index.jsp?id=10">Tharayil Mappila</a>'s descendant{" "}
+                <a href="index.jsp?id=10">Tharayil Mappila</a>&apos;s descendant{" "}
                 <a href="index.jsp?id=12">Mathai Punnoose</a> died in 1848 when
                 he was 42 years old. After his death, his wife:{" "}
                 <a href="index.jsp?id=13">Mariamma Thayvil</a> moved to
-                'Kizhakkayil' house and stayed there until her death.
+                &apos;Kizhakkayil&apos; house and stayed there until her death.
                 <br /> <br /> <a href="index.jsp?id=13">Mariamma</a> and{" "}
                 <a href="index.jsp?id=12">Mathai</a>
                 had five children (four boys and one girl):
@@ -145,8 +141,8 @@ function Home() {
                   width={700}
                 />
                 <br />
-                &nbsp; The "Malayan Thottam", A view from the backyard of the
-                Njandupara Tharavadu.
+                &nbsp; The &quot;Malayan Thottam&quot;, A view from the backyard
+                of the Njandupara Tharavadu.
                 <br />
                 <hr /> <br />
                 <img
@@ -163,7 +159,7 @@ function Home() {
                   width={700}
                 />
                 <br />
-                &nbsp; KA Thomas's Family (Kochi)
+                &nbsp; KA Thomas&apos;s Family (Kochi)
                 <br />
                 <hr /> <br />
                 <img
@@ -181,7 +177,7 @@ function Home() {
                   width={700}
                 />
                 <br />
-                &nbsp; KC Kuriakose's House Pala
+                &nbsp; KC Kuriakose&apos;s House Pala
                 <br />
                 <hr />
               </div>
