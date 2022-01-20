@@ -65,10 +65,12 @@ function Home() {
                 Due to attacks from enemies after Pala Palli construction,{" "}
                 <a href="index.jsp?id=10">Tharayil Mappila</a> moved to
                 Njaralakattu (Njallaykattu) near the church and stayed there.{" "}
-                <a href="index.jsp?id=10">Tharayil Mappila</a>&apos;s descendant{" "}
-                <a href="index.jsp?id=12">Mathai Punnoose</a> died in 1848 when
-                he was 42 years old. After his death, his wife:{" "}
-                <a href="index.jsp?id=13">Mariamma Thayvil</a> moved to
+                <a href="index.jsp?id=10">Tharayil Mappila</a>
+                &apos;s descendant <a href="index.jsp?id=12">
+                  Mathai Punnoose
+                </a>{" "}
+                died in 1848 when he was 42 years old. After his death, his
+                wife: <a href="index.jsp?id=13">Mariamma Thayvil</a> moved to
                 &apos;Kizhakkayil&apos; house and stayed there until her death.
                 <br /> <br /> <a href="index.jsp?id=13">Mariamma</a> and{" "}
                 <a href="index.jsp?id=12">Mathai</a>

@@ -9,7 +9,8 @@ function MapSection() {
             <div className="col-md-6">
               <div className="recent-posts push-bottom">
                 <h2>
-                  <strong>Questions</strong> That <strong>Were</strong> Asked
+                  <strong>Questions</strong> That
+                  <strong>Were</strong> Asked
                 </h2>
                 <div className="row">
                   <div
@@ -21,7 +22,8 @@ function MapSection() {
                         <article>
                           <p>
                             <b>Q:</b> How long did it take to create the
-                            website? <br />
+                            website?
+                            <br />
                             <b>A:</b> It took around 3-4 months to complete the
                             family tree website.
                           </p>
@@ -33,7 +35,8 @@ function MapSection() {
                         <article>
                           <p>
                             <b>Q:</b> How long did it take to create the
-                            website? <br />
+                            website?
+                            <br />
                             <b>A:</b> It took around 3-4 months to complete the
                             family tree website.
                           </p>
@@ -46,7 +49,8 @@ function MapSection() {
             </div>
             <div className="col-md-6">
               <h2>
-                <strong>Message</strong> from <strong>the</strong> Developer
+                <strong>Message</strong> from
+                <strong>the</strong> Developer
               </h2>
               <div className="row">
                 <div

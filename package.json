@@ -7,7 +7,7 @@
     "start:test": "webpack serve --mode=test",
     "build": "webpack --mode=production",
     "build:dev": "webpack --mode=development",
-    "lint": "eslint --fix ."
+    "lint": "eslint --ext .jsx --fix ."
   },
   "license": "MIT",
   "devDependencies": {
@@ -23,8 +23,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "file-loader": "^6.2.0",
-    "prettier": "2.5.1",
+    "prettier": "^2.5.1",
     "source-map": "^0.7.3",
     "style-loader": "^3.3.1",
     "webpack-cli": "^4.9.1",
@@ -32,10 +31,10 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "html-loader": "^3.1.0",
     "promise-polyfill": "^8.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "url-loader": "^4.1.1",
     "webpack": "^5.66.0"
   }
 }

@@ -39,6 +39,9 @@ const config = {
     new webpack.DefinePlugin({
       LOCAL_PORT: 3000,
     }),
+    new webpack.DefinePlugin({
+      PUBLIC_URL: path.resolve(__dirname, "public"),
+    }),
   ],
 };
 

@@ -4,4 +4,4 @@
 /build
 /public/images/
 # template styling
-/src/style
+/public/style
