@@ -1,21 +1,27 @@
-import "../public/style/css/bootstrap.css";
-import "../public/style/css/fonts/font-awesome/css/font-awesome.css";
-import "../public/style/vendor/owl-carousel/owl.carousel.css";
-import "../public/style/vendor/owl-carousel/owl.theme.css";
-import "../public/style/vendor/magnific-popup/magnific-popup.css";
-import "../public/style/css/theme.css";
-import "../public/style/css/theme-elements.css";
-import "../public/style/css/theme-animate.css";
-import "../public/style/vendor/rs-plugin/css/settings.css";
-import "../public/style/vendor/circle-flip-slideshow/css/component.css";
-import "../public/style/css/skins/blue.css";
-import "../public/style/css/custom.css";
-import "../public/style/css/theme-responsive.css";
-import "../public/style/css/googlefonts.css";
-import React from "react";
-import PromisePolyfill from "promise-polyfill";
-import Home from "./components/Home";
-import Median from "./components/Median";
+import '../build/style/css/bootstrap.css';
+import '../build/style/css/fonts/font-awesome/css/font-awesome.css';
+import '../build/style/vendor/owl-carousel/owl.carousel.css';
+import '../build/style/vendor/owl-carousel/owl.theme.css';
+import '../build/style/vendor/magnific-popup/magnific-popup.css';
+import '../build/style/css/theme.css';
+import '../build/style/css/theme-elements.css';
+import '../build/style/css/theme-animate.css';
+import '../build/style/vendor/rs-plugin/css/settings.css';
+import '../build/style/vendor/circle-flip-slideshow/css/component.css';
+import '../build/style/css/skins/blue.css';
+import '../build/style/css/custom.css';
+import '../build/style/css/theme-responsive.css';
+import '../build/style/css/googlefonts.css';
+import React from 'react';
+import PromisePolyfill from 'promise-polyfill';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './components/Home';
+import Median from './components/Median';
+import Footer from './components/Footer';
+import Gallery from './components/Gallery';
+import Results from './components/Results';
+import Bio from './components/Bio';
 
 if (!window.Promise) {
   window.Promise = PromisePolyfill;
@@ -24,15 +30,16 @@ if (!window.Promise) {
 function App() {
   return (
     <div className="boxed">
-      {/* <div className="body" style={{ backgroundColor: "#FFFFFF" }}> */}
-      <div
-        className="body"
-        style={{
-          backgroundImage: "./style/img/gray_jean.png",
-        }}
-      >
+      <div className="body">
+        <Header />
         <Median />
-        <Home />
+        <Routes>
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/results/:term" element={<Results />} />
+          <Route path="/result/:id" element={<Bio />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <Footer />
       </div>
     </div>
   );

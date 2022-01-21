@@ -1,5 +1,5 @@
-import React from "react";
-// import MapSection from "./MapSection";
+import React from 'react';
+// import MapSection from './MapSection';
 
 function Home() {
   return (
@@ -12,7 +12,7 @@ function Home() {
                 <b>Family History</b>
               </h4>
               <font face="verdana" size={3}>
-                Based on available sources, we belong to Tharayil Mappila&apos;s
+                Based on available sources, we belong to Tharayil Mappila&apos;
                 lineage. In about 1000 AD, the Tharayil Mappilas depended on
                 Kuravillangadu church and Aruvithura church for their spiritual
                 needs. An unhappy incident occurred at this time. It was the
@@ -34,65 +34,59 @@ function Home() {
                 A.D. The construction of the church was completed and the first
                 Holy Mass was celebrated on Easter Sunday of 1003. The
                 administration of the Pala church was conducted by the four
-                families namely Tharayil, Koottumgal Erakkonni and Vayalakomb
-                for the following 700 years. Later by the end of 17th century, a
-                new administrative body of sixteen members came in to existence,
-                elected from the public meeting organized by the church.
-              </font>{" "}
+                families (Tharayil, Koottumgal, Erakkonni, and Vayalakomb) for
+                the following 700 years. Later, by the end of the 17th century,
+                a new administrative body of sixteen members was elected in a
+                public meeting.
+              </font>{' '}
               <br />
-              <br />{" "}
-              <a
-                href="http://en.wikipedia.org/wiki/St._Thomas_Cathedral,_Pala"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <br />{' '}
+              <a href="http://en.wikipedia.org/wiki/St._Thomas_Cathedral,_Pala">
                 <font face="verdana" size={3}>
-                  http://en.wikipedia.org/wiki/St._Thomas_Cathedral,_Pala{" "}
+                  http://en.wikipedia.org/wiki/St._Thomas_Cathedral,_Pala{' '}
                 </font>
               </a>
               <br />
               <br />
               <div align="center">
                 <img
-                  src="./images/album/pala_church.jpg"
+                  src="images/album/pala_church.jpg"
                   alt="Pala Church"
                   width={700}
                 />
                 <br />
               </div>
-              <br /> <br />{" "}
+              <br /> <br />{' '}
               <font face="verdana" size={3}>
-                Due to attacks from enemies after Pala Palli construction,{" "}
+                Due to attacks from enemies after Pala Palli construction,{' '}
                 <a href="index.jsp?id=10">Tharayil Mappila</a> moved to
-                Njaralakattu (Njallaykattu) near the church and stayed there.{" "}
-                <a href="index.jsp?id=10">Tharayil Mappila</a>
-                &apos;s descendant <a href="index.jsp?id=12">
-                  Mathai Punnoose
-                </a>{" "}
-                died in 1848 when he was 42 years old. After his death, his
-                wife: <a href="index.jsp?id=13">Mariamma Thayvil</a> moved to
+                Njaralakattu (Njallaykattu) near the church and stayed there.{' '}
+                <a href="index.jsp?id=10">Tharayil Mappila</a>&apos; descendant{' '}
+                <a href="index.jsp?id=12">Mathai Punnoose</a> died in 1848 when
+                he was 42 years old. After his death, his wife:{' '}
+                <a href="index.jsp?id=13">Mariamma Thayvil</a> moved to
                 &apos;Kizhakkayil&apos; house and stayed there until her death.
-                <br /> <br /> <a href="index.jsp?id=13">Mariamma</a> and{" "}
+                <br /> <br /> <a href="index.jsp?id=13">Mariamma</a> and{' '}
                 <a href="index.jsp?id=12">Mathai</a>
                 had five children (four boys and one girl):
               </font>
-              <br /> <br />{" "}
+              <br /> <br />{' '}
               <font face="verdana" size={3} color="gray">
                 <li>
                   <a href="index.jsp?id=14">Mathai Punnoose</a> (The father of
                   Thekkettathu family)
                 </li>
-              </font>{" "}
-              <br />{" "}
+              </font>{' '}
+              <br />{' '}
               <font face="verdana" size={3} color="gray">
                 <li>
                   <a href="index.jsp?id=20">Chandy Punnoose</a> (The father of
                   Kizhakkayil family)
                 </li>
-              </font>{" "}
-              <br />{" "}
+              </font>{' '}
+              <br />{' '}
               <b>
-                {" "}
+                {' '}
                 <font face="verdana" size={3} color="gray">
                   <li>
                     <a href="index.jsp?id=16">Punnoose Punnoose</a> (The father
@@ -100,14 +94,14 @@ function Home() {
                   </li>
                 </font>
               </b>
-              <br />{" "}
+              <br />{' '}
               <font face="verdana" size={3} color="gray">
                 <li>
                   <a href="index.jsp?id=18">Ouseph Punnoose</a> (The father of
                   Kumbukkal family)
                 </li>
-              </font>{" "}
-              <br />{" "}
+              </font>{' '}
+              <br />{' '}
               <font face="verdana" size={3} color="gray">
                 <li>
                   <a href="index.jsp?id=22">Mariam Kizhakkayil</a> (Became a
@@ -116,7 +110,7 @@ function Home() {
               </font>
               <p />
               <div align="center">
-                <br />{" "}
+                <br />{' '}
                 <img
                   src="images/kuzhiamplavil/great_grand_parents.jpg"
                   alt="Great grandparents"
@@ -126,7 +120,7 @@ function Home() {
                 Njandupara) <br />
                 <hr />
                 <br />
-                <br />{" "}
+                <br />{' '}
                 <img
                   src="/images/album/tharavadu.jpg"
                   alt="Ancestral Home"
@@ -150,7 +144,7 @@ function Home() {
                 <img
                   src="/images/album/k_j_chacko_family.jpg"
                   alt="KJ Chacko Family"
-                />{" "}
+                />{' '}
                 <br />
                 &nbsp; KJ Chacko &amp; Family (Njandupara)
                 <br />
@@ -161,7 +155,7 @@ function Home() {
                   width={700}
                 />
                 <br />
-                &nbsp; KA Thomas&apos;s Family (Kochi)
+                &nbsp; KA Thomas&apos; Family (Kochi)
                 <br />
                 <hr /> <br />
                 <img
@@ -179,7 +173,7 @@ function Home() {
                   width={700}
                 />
                 <br />
-                &nbsp; KC Kuriakose&apos;s House Pala
+                &nbsp; KC Kuriakose&apos; House Pala
                 <br />
                 <hr />
               </div>

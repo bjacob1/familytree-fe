@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function Median() {
   return (
@@ -14,12 +14,17 @@ function Median() {
               picture gallery.
             </p> */}
             <p>
-              <em>Kuzhiamplavil Family Tree</em>
+              <em>Welcome</em>&nbsp;&nbsp;to the Kuzhiamplavil Family Tree!
             </p>
           </div>
           {/* <div className="col-md-4" align="right">
-            <img src="/images/familytree.png" alt="Tree" height={140} />
-            &nbsp; <img src="/images/sacred_heart.jpg" alt="Sacred Heart" height={140} />
+            <img src="/images/familytree.png" alt="Tree" height={50} />
+            &nbsp;{' '}
+            <img
+              src="/images/sacred_heart.jpg"
+              alt="Sacred Heart"
+              height={50}
+            />
           </div> */}
         </div>
       </div>

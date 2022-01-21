@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function MapSection() {
   return (
@@ -9,8 +9,7 @@ function MapSection() {
             <div className="col-md-6">
               <div className="recent-posts push-bottom">
                 <h2>
-                  <strong>Questions</strong> That
-                  <strong>Were</strong> Asked
+                  <strong>Questions</strong> That <strong>Were</strong> Asked
                 </h2>
                 <div className="row">
                   <div
@@ -22,8 +21,7 @@ function MapSection() {
                         <article>
                           <p>
                             <b>Q:</b> How long did it take to create the
-                            website?
-                            <br />
+                            website? <br />
                             <b>A:</b> It took around 3-4 months to complete the
                             family tree website.
                           </p>
@@ -35,8 +33,7 @@ function MapSection() {
                         <article>
                           <p>
                             <b>Q:</b> How long did it take to create the
-                            website?
-                            <br />
+                            website? <br />
                             <b>A:</b> It took around 3-4 months to complete the
                             family tree website.
                           </p>
@@ -49,8 +46,7 @@ function MapSection() {
             </div>
             <div className="col-md-6">
               <h2>
-                <strong>Message</strong> from
-                <strong>the</strong> Developer
+                <strong>Message</strong> from <strong>the</strong> Developer
               </h2>
               <div className="row">
                 <div
@@ -60,7 +56,15 @@ function MapSection() {
                   <div>
                     <div className="col-md-12">
                       <blockquote className="testimonial">
-                        <p>Hello and welcome to Our Family Tree Website!</p>
+                        <p>
+                          Hello and welcome to Our Family Tree Website! This
+                          website was designed to be a permanent directory of
+                          our family and let family members learn more about the
+                          family and its history. You can do many things,
+                          including searching for someone in the family tree,
+                          viewing all of the family members, and even searching
+                          for people&apos;s relatives.
+                        </p>
                       </blockquote>
                       <div className="testimonial-arrow-down" />
                       <div className="testimonial-author">
@@ -71,7 +75,7 @@ function MapSection() {
                           />
                         </div>
                         <p>
-                          <a href="index.jsp?id=110" style={{ color: "blue" }}>
+                          <a href="index.jsp?id=110" style={{ color: 'blue' }}>
                             <b>Brian Jacob</b>
                           </a>
                           <span>Developer- Family Tree Website</span>
@@ -88,14 +92,14 @@ function MapSection() {
                           this family tree. You can also see questions that have
                           been asked by going to the bottom of the page (right
                           next to this). Want to ask your own questions? Go to
-                          the{" "}
-                          <a href="contact.jsp" style={{ color: "aqua" }}>
+                          the{' '}
+                          <a href="contact.jsp" style={{ color: 'aqua' }}>
                             contact page
-                          </a>{" "}
-                          or just{" "}
+                          </a>{' '}
+                          or just{' '}
                           <a
                             href="mailto:brian.jacob@outlook.com?subject=Family Tree Comment"
-                            style={{ color: "aqua" }}
+                            style={{ color: 'aqua' }}
                           >
                             click here
                           </a>
@@ -113,7 +117,7 @@ function MapSection() {
                           />
                         </div>
                         <p>
-                          <a href="index.jsp?id=110" style={{ color: "blue" }}>
+                          <a href="index.jsp?id=110" style={{ color: 'blue' }}>
                             <b>Brian Jacob</b>
                           </a>
                           <span>Developer- Family Tree Website</span>
