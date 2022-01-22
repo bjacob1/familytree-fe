@@ -53,11 +53,14 @@ const useResource = () => {
   };
 
   const getFullName = (person) => {
+    if (!person) {
+      return null;
+    }
     const fullName =
-      person.middle_name.length === 1
+      person.middle_name && person.middle_name.length === 1
         ? `${person.prefix} ${person.first_name} ${person.middle_name} ${person.last_name}`.trim()
         : `${person.prefix} ${person.first_name} ${person.last_name}`.trim();
-    return person.nickname.length !== 0
+    return person.nickname && person.nickname.length !== 0
       ? `${fullName} (${person.nickname})`
       : fullName;
   };

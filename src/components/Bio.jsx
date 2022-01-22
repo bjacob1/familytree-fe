@@ -9,6 +9,7 @@ function Bio() {
   const params = useParams();
   const [family, personService] = useResource();
   useEffect(() => {
+    window.scrollTo(0, 0);
     const { id } = params;
     personService.getFamilyById(id);
   }, [params]);
@@ -84,7 +85,7 @@ function Bio() {
               id={family.spouse.id}
             />
           )}
-          {family.children.data.length === 0 ? null : (
+          {!family.children.data || family.children.data.length === 0 ? null : (
             <tr valign="top">
               <td bgcolor="white" width={180}>
                 <b>
@@ -110,7 +111,7 @@ function Bio() {
               </td>
             </tr>
           )}
-          {family.siblings.data.length === 0 ? null : (
+          {!family.siblings.data || family.siblings.data.length === 0 ? null : (
             <tr valign="top">
               <td bgcolor="white" width={180}>
                 <b>
@@ -138,7 +139,12 @@ function Bio() {
               </td>
             </tr>
           )}
-          <Web family={family} personService={personService} />
+          {family.paternalGrandfather ||
+          family.paternalGrandmother ||
+          family.maternalGrandfather ||
+          family.maternalGrandmother ? (
+            <Web family={family} personService={personService} />
+          ) : null}
         </tbody>
       </table>
     </div>

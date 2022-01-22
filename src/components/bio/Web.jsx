@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import propTypes from 'prop-types';
 import Heading from './Heading';
+import Member from './web/Member';
 
 function Web({ family, personService }) {
   return (
@@ -14,71 +14,85 @@ function Web({ family, personService }) {
               <tr>
                 <td width={200} />
                 <td width={200} />
-                <td align="center" bgcolor="aqua" width={275}>
-                  <b>
-                    <font color="black">
-                      Grandfather:{' '}
-                      <Link
-                        style={{
-                          color: 'blue',
-                          textDecoration: 'none',
-                          cursor: 'pointer',
-                        }}
-                        to={`/result/${family.paternalGrandfather.id}`}
-                      >
-                        {personService.getFullName(family.paternalGrandfather)}
-                      </Link>
-                    </font>
-                  </b>
-                </td>
+                {!family.paternalGrandfather ? (
+                  <Member label="Grandfather" />
+                ) : (
+                  <Member
+                    label="Grandfather"
+                    name={personService.getFullName(family.paternalGrandfather)}
+                    id={family.paternalGrandfather.id}
+                  />
+                )}
               </tr>
               <tr>
                 <td width={200} />
-                <td bgcolor="aqua" align="center" width={250}>
-                  <b>
-                    <font color="black">Father: </font>
-                  </b>
+                {!family.father ? (
+                  <Member label="Father" />
+                ) : (
+                  <Member
+                    label="Father"
+                    name={personService.getFullName(family.father)}
+                    id={family.father.id}
+                  />
+                )}
+              </tr>
+              <tr>
+                <td bgcolor="white">&nbsp;</td>
+                <td bgcolor="white" />
+                {!family.paternalGrandmother ? (
+                  <Member label="Grandmother" />
+                ) : (
+                  <Member
+                    label="Grandmother"
+                    name={personService.getFullName(family.paternalGrandmother)}
+                    id={family.paternalGrandmother.id}
+                  />
+                )}
+              </tr>
+              <tr>
+                <td align="center" bgcolor="aqua">
+                  <font color="black">
+                    <b>{personService.getFullName(family.person)}</b>
+                  </font>
                 </td>
               </tr>
               <tr>
                 <td bgcolor="white">&nbsp;</td>
                 <td bgcolor="white" />
-                <td align="center" bgcolor="aqua">
-                  <b>
-                    <font color="black">Grandmother:</font>
-                  </b>
-                </td>
-              </tr>
-              <tr>
-                <td align="center" bgcolor="aqua">
-                  <b>Name</b>
-                </td>
-              </tr>
-              <tr>
-                <td bgcolor="white">&nbsp;</td>
-                <td bgcolor="white" />
-                <td bgcolor="aqua" align="center">
-                  <b>
-                    <font color="black">Grandfather:</font>
-                  </b>
-                </td>
+                {!family.maternalGrandfather ? (
+                  <Member label="Grandfather" />
+                ) : (
+                  <Member
+                    label="Grandfather"
+                    name={personService.getFullName(family.maternalGrandfather)}
+                    id={family.maternalGrandfather.id}
+                  />
+                )}
               </tr>
               <tr>
                 <td width={200} />
-                <td align="center" bgcolor="aqua">
-                  <b>
-                    <font color="black">Mother:</font>
-                  </b>
-                </td>
+                {!family.mother ? (
+                  <Member label="Mother" />
+                ) : (
+                  <Member
+                    label="Mother"
+                    name={personService.getFullName(family.mother)}
+                    id={family.mother.id}
+                  />
+                )}
               </tr>
               <tr>
                 <td bgcolor="white" />
                 <td bgcolor="white" />
-                <td bgcolor="aqua" width={300} align="center">
-                  <b>
-                    <font color="black">Grandmother:</font>
-                  </b>
-                </td>
+                {!family.maternalGrandmother ? (
+                  <Member label="Grandmother" />
+                ) : (
+                  <Member
+                    label="Grandmother"
+                    name={personService.getFullName(family.maternalGrandmother)}
+                    id={family.maternalGrandmother.id}
+                  />
+                )}
               </tr>
             </tbody>
           </table>
@@ -88,9 +102,16 @@ function Web({ family, personService }) {
   );
 }
 
+Web.defaultProps = {
+  family: null,
+  personService: null,
+};
+
 Web.propTypes = {
-  family: propTypes.objectOf(propTypes.object).isRequired,
-  personService: propTypes.objectOf(propTypes.func).isRequired,
+  family: propTypes.objectOf(
+    propTypes.oneOfType([propTypes.object, propTypes.string])
+  ),
+  personService: propTypes.objectOf(propTypes.func),
 };
 
 export default Web;
