@@ -25,9 +25,9 @@ function Results() {
                 people.map((person) =>
                   !person ? null : (
                     <Result
-                      key={`${person.id}`}
-                      imgUrl={person.image}
-                      name={`${person.prefix} ${person.first_name} ${person.last_name}`.trim()}
+                      key={person.id}
+                      image={person.image}
+                      name={peopleService.getFullName(person)}
                       onClick={() => navigate(`/result/${person.id}`)}
                     />
                   )

@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import Picture from './Picture';
 
 function Collection({ heading, images }) {
@@ -25,5 +26,10 @@ function Collection({ heading, images }) {
     </>
   );
 }
+
+Collection.propTypes = {
+  heading: propTypes.string.isRequired,
+  images: propTypes.isRequired,
+};
 
 export default Collection;

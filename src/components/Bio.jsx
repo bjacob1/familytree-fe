@@ -1,20 +1,17 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Heading from './bio/Heading';
 import Info from './bio/Info';
-// import Link from './bio/Link';
 import useResource from '../hooks/resource';
-// import Web from './bio/Web'
+import Web from './bio/Web';
 
 function Bio() {
   const params = useParams();
   const [family, personService] = useResource();
   useEffect(() => {
     const { id } = params;
-    console.log('id', id);
     personService.getFamilyById(id);
-  }, []);
-  console.log('family', family);
+  }, [params]);
   if (!family) {
     return null;
   }
@@ -56,7 +53,7 @@ function Bio() {
             </>
           )}
           <Heading text="Information" />
-          <Info text={family.person.full_name} label="Name:" />
+          <Info text={personService.getFullName(family.person)} label="Name:" />
           <Info text={family.person.family_name} label="Family Name:" />
           {family.person.state === '' ||
           family.person.state === 'Kerala' ? null : (
@@ -65,29 +62,29 @@ function Bio() {
               label="Location:"
             />
           )}
-          {/* <Heading text="Immediate Family Members" />
-          {!father ? null : (
+          <Heading text="Immediate Family Members" />
+          {!family.father ? null : (
             <Info
-              text={father.name}
+              text={personService.getFullName(family.father)}
               label="Father:"
-              // onClick={() => onClick(father.id)}
+              id={family.father.id}
             />
           )}
-          {!mother ? null : (
+          {!family.mother ? null : (
             <Info
-              text={mother.name}
+              text={personService.getFullName(family.mother)}
               label="Mother:"
-              // onClick={() => onClick(mother.id)}
+              id={family.mother.id}
             />
           )}
-          {!spouse ? null : (
+          {!family.spouse ? null : (
             <Info
-              text={spouse.name}
+              text={personService.getFullName(family.spouse)}
               label="Spouse:"
-              // onClick={() => onClick(spouse.id)}
+              id={family.spouse.id}
             />
-          )} */}
-          {/* {children_objs.length === 0 ? null : (
+          )}
+          {family.children.data.length === 0 ? null : (
             <tr valign="top">
               <td bgcolor="white" width={180}>
                 <b>
@@ -95,20 +92,25 @@ function Bio() {
                 </b>
               </td>
               <td width={600} bgcolor="white">
-                {children_objs.map((child_obj) => (
-                  <div key={child_obj.name}>
+                {family.children.data.map((child) => (
+                  <div key={child.id}>
                     <Link
-                      onClick={onClick}
-                      id={child_obj.id}
-                      text={child_obj.name}
-                    />
+                      style={{
+                        color: 'blue',
+                        textDecoration: 'none',
+                        cursor: 'pointer',
+                      }}
+                      to={`/result/${child.id}`}
+                    >
+                      {personService.getFullName(child)}
+                    </Link>
                     <br />
                   </div>
                 ))}
               </td>
             </tr>
-          )} */}
-          {/* {sibling_objs.length === 0 ? null : (
+          )}
+          {family.siblings.data.length === 0 ? null : (
             <tr valign="top">
               <td bgcolor="white" width={180}>
                 <b>
@@ -116,20 +118,27 @@ function Bio() {
                 </b>
               </td>
               <td width={600} bgcolor="white">
-                {sibling_objs.map((sibling_obj) => (
-                  <div key={sibling_obj.name}>
-                    <Link
-                      onClick={onClick}
-                      id={sibling_obj.id}
-                      text={sibling_obj.name}
-                    />
-                    <br />
-                  </div>
-                ))}
+                {family.siblings.data
+                  // .filter((sibling) => sibling.id !== family.person.id)
+                  .map((sibling) => (
+                    <div key={sibling.id}>
+                      <Link
+                        style={{
+                          color: 'blue',
+                          textDecoration: 'none',
+                          cursor: 'pointer',
+                        }}
+                        to={`/result/${sibling.id}`}
+                      >
+                        {personService.getFullName(sibling)}
+                      </Link>
+                      <br />
+                    </div>
+                  ))}
               </td>
             </tr>
-          )} */}
-          {/* <Web /> */}
+          )}
+          <Web family={family} personService={personService} />
         </tbody>
       </table>
     </div>

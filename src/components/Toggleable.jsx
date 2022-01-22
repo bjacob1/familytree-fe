@@ -1,21 +1,24 @@
-import React, { useState, useImperativeHandle } from 'react'
+import React, { useState, useImperativeHandle } from 'react';
+import propTypes from 'prop-types';
 
 const Toggleable = React.forwardRef(({ children }, ref) => {
-  const [visible, setVisible] = useState(false)
-  const style = { display: visible ? "" : "none" }
+  const [visible, setVisible] = useState(false);
+  const style = { display: visible ? '' : 'none' };
   const toggleVisibility = () => {
-    setVisible(!visible)
-  }
+    setVisible(!visible);
+  };
   const show = () => {
-    setVisible(true)
-  }
+    setVisible(true);
+  };
   const hide = () => {
-    setVisible(false)
-  }
-  useImperativeHandle(ref, () => { return { toggleVisibility, show, hide } })
-  return (
-    <div style={style}>{children}</div>
-  )
-})
+    setVisible(false);
+  };
+  useImperativeHandle(ref, () => ({ toggleVisibility, show, hide }));
+  return <div style={style}>{children}</div>;
+});
 
-export default Toggleable
+Toggleable.propTypes = {
+  children: propTypes.isRequired,
+};
+
+export default Toggleable;

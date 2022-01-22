@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import propTypes from 'prop-types';
 import Heading from './Heading';
 
-function Web() {
+function Web({ family, personService }) {
   return (
     <>
       <Heading text="Family Web" />
@@ -14,7 +16,19 @@ function Web() {
                 <td width={200} />
                 <td align="center" bgcolor="aqua" width={275}>
                   <b>
-                    <font color="black">Grandfather:</font>
+                    <font color="black">
+                      Grandfather:{' '}
+                      <Link
+                        style={{
+                          color: 'blue',
+                          textDecoration: 'none',
+                          cursor: 'pointer',
+                        }}
+                        to={`/result/${family.paternalGrandfather.id}`}
+                      >
+                        {personService.getFullName(family.paternalGrandfather)}
+                      </Link>
+                    </font>
                   </b>
                 </td>
               </tr>
@@ -73,5 +87,10 @@ function Web() {
     </>
   );
 }
+
+Web.propTypes = {
+  family: propTypes.objectOf(propTypes.object).isRequired,
+  personService: propTypes.objectOf(propTypes.func).isRequired,
+};
 
 export default Web;

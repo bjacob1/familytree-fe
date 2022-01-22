@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 function Heading({ text }) {
   return (
@@ -11,5 +12,9 @@ function Heading({ text }) {
     </tr>
   );
 }
+
+Heading.propTypes = {
+  text: propTypes.string.isRequired,
+};
 
 export default Heading;

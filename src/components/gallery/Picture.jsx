@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 function Picture({ imgUrl, altText, caption }) {
   return (
@@ -16,5 +17,11 @@ function Picture({ imgUrl, altText, caption }) {
     </>
   );
 }
+
+Picture.propTypes = {
+  imgUrl: propTypes.string.isRequired,
+  altText: propTypes.string.isRequired,
+  caption: propTypes.string.isRequired,
+};
 
 export default Picture;
